@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
+    <title>Document</title>
+</head>
+<body>
 <?php
 //Muestra la fecha y la hora actuales con el formato dd/mm/yy hh:mm:ss
 $fechaHoy = new DateTime('now');
@@ -26,3 +34,6 @@ echo $horaNueva_York -> format('y-m-d h:i:s') . '<br>';
 $diaEnero = new DateTime('2024-01-01');
 echo $diaEnero -> format ('l') . '<br>';
 ?>
+</body>
+</html>
+
