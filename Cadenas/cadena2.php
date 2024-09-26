@@ -23,10 +23,8 @@
     $name = strtolower($name);
 
     // Verificar si el nombre comienza con el prefijo
-    $starts_with_prefix = '';
-    if ($prefix !== '') {
-        $starts_with_prefix = strpos($name, $prefix) === 0 ? 'Sí' : 'No';
-    }
+   $prefix = 'Lau';
+   $starts_with_prefix = substr(($name), 0 , strlen($prefix)) === $prefix ? 'Sí' : 'No';
 
     // Contar el número de veces que aparece la letra 'e' (mayúscula o minúscula)
     $count_e = substr_count(strtolower($name), 'e');
