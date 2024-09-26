@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 <?php
 $nombre = ['Laura', 'Beatriz', 'Ruben', 'Vanesa'];
 echo count($nombre);

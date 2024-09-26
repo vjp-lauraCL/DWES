@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="Laura Casero Labrador">
     <title>Cadena3</title>
 </head>
 <body>

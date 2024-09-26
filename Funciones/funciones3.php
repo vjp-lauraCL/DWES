@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
+    <title>Document</title>
+</head>
+<body>
 <?php
 //Creamos una funcion operaciones que muestre el resultado de una operacion con dos operandos
 //se mostrará por pantalla el primer operando, el simbolo de la operacion, el segundo operando, el simbolo =
@@ -33,3 +41,5 @@ operaciones(function($num1, $num2){
 
 
 ?>
+</body>
+</html>

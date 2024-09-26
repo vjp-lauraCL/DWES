@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="autor" content="Laura Casero Labrador">
+  <title>Document</title>
+</head>
+<body>
 <?php
 //crear una funcion llamada insert que nos genere una sentencia tipo insert de SQL. Recibe dos parámetros:
 //el nombre de la tabla y un array asociativo que contendrá los nombres y valores de los campos de la tabla.
@@ -21,3 +29,5 @@ foreach($alumnos as $alumno){
 }
 
 ?>
+</body>
+</html>

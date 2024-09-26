@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
+    <title>Document</title>
+</head>
+<body>
 <?php
 //Repite el ejercicio anterior con los siguientes cambios:
 //La cadena resultante se pasará por referencia.Pasaremos la cadena de la siguiente forma:
@@ -39,7 +47,6 @@ foreach($alumnos as $alumno){
 //         echo "<br>";
 // }
 
-
-
-
 ?>
+</body>
+</html>

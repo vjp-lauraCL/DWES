@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
     <title>Cadena2</title>
 </head>
 <body>

@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Laura Casero Labrador">
+    <title>Cadenas1</title>
+</head>
+<body>
 <?php
 $nombre = 'anaMArial';
 echo "Nombre: $nombre<br>";
@@ -20,3 +28,6 @@ if (str_ends_with($nombre, "al") == true) {
 echo "<br>";
 echo rtrim($nombre);
 echo "<br>";
+?>
+</body>
+</html>
