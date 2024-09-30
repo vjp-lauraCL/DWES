@@ -1,4 +1,5 @@
 <?php
+//Al escribir en el URL lo escribimos de la siguiente forma ?id=nombre&ci=ciudad&ed=edad
 if(isset($_GET['id'])){
     $nombre = $_GET['id'];
 } else {
