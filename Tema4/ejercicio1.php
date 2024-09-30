@@ -22,5 +22,8 @@ if(isset($_GET['ed'])){
 
 
 echo "Hola, soy " . $nombre . ", tengo " . $edad . " años y vivo en la ciudad de " . $ciudad;
-
+ 
+//Otra posible solucion
+//$nombre = $_GET['id'] ?? 'XXX';
+//echo "Hola soy .(_GET['nombre]?? 'XX');
 ?>
