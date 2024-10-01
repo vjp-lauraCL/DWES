@@ -21,7 +21,7 @@
            echo 'Días ingresados: ' .$_POST['dias'] . '<br>';
            $fecha = new DateTime($_POST['fecha']);
            $fecha -> modify(( + $_POST['dias'] . 'days'));
-           echo $fecha -> format('Y-m-d') . '<br>';
+           echo "La fecha resultante es:" .  $fecha -> format('Y-m-d') . '<br>';
         }
     ?>
 </body>
