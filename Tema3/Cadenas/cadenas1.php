@@ -26,6 +26,14 @@
     //Muestra la posicion de la primera A existente  en el nombre. Si no hay ninguna mostrará -1
     echo strpos($nombre, "A");
     echo "<br>";
+
+    // $resultado = strrpos(strtolower($nombre),"a");
+    // if ($resultado != false){
+    //     echo "La última aparece en la última posición " . $resultado .'<br>';
+    // }else{
+    //     echo "no se ha encontrado ninguna 'a' en el texto";
+    // }
+    
     //Lo mismo pero con la última A
     echo strcspn($nombre, "a");
     echo "<br>";
