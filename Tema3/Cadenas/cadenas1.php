@@ -27,26 +27,27 @@
     echo strpos($nombre, "A");
     echo "<br>";
 
-    // $resultado = strrpos(strtolower($nombre),"a");
-    // if ($resultado != false){
+ 
+    //Lo mismo pero con la última A
+    echo strcspn($nombre, "a");
+    echo "<br>";
+       // $resultado = strrpos(strtolower($nombre),"a");
+    // if ($resultado !== false){
     //     echo "La última aparece en la última posición " . $resultado .'<br>';
     // }else{
     //     echo "no se ha encontrado ninguna 'a' en el texto";
     // }
     
-    //Lo mismo pero con la última A
-    echo strcspn($nombre, "a");
-    echo "<br>";
     //Muestra el nombre sustituyendo las letras por el número cero.
     echo  str_ireplace('$nombre', '0', '$nombre');
     echo "<br>";
     //Indica si el nombre comienza por "al" o no. 
-    if (str_ends_with($nombre, "al") == true) {
+    if (str_starts_with($nombre, "al") == true) {
         echo " si ";
     }
     echo "<br>";
     //Elimina los espacios del principio y el final del nombre si los hubiera y muestra el resultado por pantalla
-    echo rtrim($nombre);
+    echo trim($nombre);
     echo "<br>";
     //Muestra la variable nombre con la primera letra en mayúsculas y las demás en minúsculas
     echo ucfirst(strtolower($nombre));

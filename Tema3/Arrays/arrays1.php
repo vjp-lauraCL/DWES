@@ -9,7 +9,7 @@
     <?php
     $nombre = ['Laura', 'Beatriz', 'Ruben', 'Vanesa'];
     echo count($nombre);
-    $nombres = implode (',', $nombre);
+    $nombres = implode (' ', $nombre);
     echo $nombres .'br>';
 
     //ordenar

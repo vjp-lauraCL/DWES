@@ -23,7 +23,7 @@ echo $fecha -> format('Y-m-d') . '<br>';
 $diasEnero =new DateTime ('2024-01-01');
 $diasActual = new DateTime('now');
 $diferencia = $diasEnero -> diff ($diasActual);
-echo $diferencia -> format ('%a dias han pasado desde el 1 de enero') . '<br>';
+echo $diferencia -> format ('%R%a dias han pasado desde el 1 de enero') . '<br>';
 
 //Muestra la fecha y la hora actuales de Nueva York
 $zona = new DateTimeZone ('America/New_York');
