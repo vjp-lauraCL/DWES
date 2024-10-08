@@ -1,14 +1,13 @@
 <?php
 function obtenerCanciones(){
     $canciones = [
-    ["titulo" => "Witch's Spell", "Género"=> "Rock", "Album"=> "Power Up"], 
-    ["titulo" => "Tutto con te", "Género"=> "Pop", "Album"=> "Gira, il mondo gira"], 
-    ["titulo" => "Somethin' Stupid", "Género"=> "Jazz", "Album"=> "The World We Knew"], 
-    ["titulo" => "Cofessin' The Blues", "Género"=> "Blues", "Album"=> "Deuces Wild"],   
-];
+        ["titulo" => "Witch's Spell", "genero" => "Rock", "album" => "Power Up"], 
+        ["titulo" => "Tutto con te", "genero" => "Pop", "album" => "Gira, il mondo gira"], 
+        ["titulo" => "Somethin' Stupid", "genero" => "Jazz", "album" => "The World We Knew"], 
+        ["titulo" => "Cofessin' The Blues", "genero" => "Blues", "album" => "Deuces Wild"],   
+    ];
     return $canciones;
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $textoBusqueda = $_POST['textoBusqueda'];
@@ -19,14 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $resultado = [];
 
     foreach($listaCanciones as $cancion){
-        if($genero && $cancion['genero'] != $genero){
+        if($genero && strcasecmp($cancion['genero'], $genero) != 0){
             continue;
         }
         if($tipoBusqueda == 'titulo' && strpos($cancion['titulo'], $textoBusqueda) !== false){
             $resultado[] = $cancion;    
-        }elseif($tipoBusqueda == 'nombre' && strpos($cancion['nombre'], $textoBusqueda) !== false){
-            $resultado[] = $cancion;
-        }elseif($tipoBusqueda == 'ambosCampos' && (strpos($cancion['titulo'], $textoBusqueda) !== false || strpos($cancion['nombre'], $textoBusqueda) !== false)){
+        } elseif($tipoBusqueda == 'ambosCampos' && (strpos($cancion['titulo'], $textoBusqueda) !== false || strpos($cancion['album'], $textoBusqueda) !== false)){
             $resultado[] = $cancion;
         }
     }
@@ -36,16 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<tr><th>Titulo</th><th>Genero</th><th>Album</th></tr>';
         foreach($resultado as $cancion){
             echo '<tr>';
-            echo '<td>' . $cancion['titulo'] . '</td>';
-            echo '<td>' . $cancion['genero'] . '</td>';
-            echo '<td>' . $cancion['album'] . '</td>';
+            echo '<td>' . htmlspecialchars($cancion['titulo']) . '</td>';
+            echo '<td>' . htmlspecialchars($cancion['genero']) . '</td>';
+            echo '<td>' . htmlspecialchars($cancion['album']) . '</td>';
             echo '</tr>';
         }
         echo '</table>';
-    }
-    else{
-        echo 'No hay conicidencias con su búsqueda';
+    } else {
+        echo 'No hay coincidencias con su búsqueda';
     }
 }
-    require 'index.php';
 ?>
