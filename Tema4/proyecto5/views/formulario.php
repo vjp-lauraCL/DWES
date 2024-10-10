@@ -7,15 +7,15 @@
 </head>
 <body>
     <h1>Búsqueda de canciones</h1>
-    <form action ="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+    <form action ="../index.php" method="POST">
         <label for="textoBusqueda">Texto a buscar: </label>
-        <input type="text"> <br>
+        <input type="text" name="textoBusqueda" id="textoBusqueda"> <br>
         <label for="tipoBusqueda">Buscar en:</label>
-        <input type="radio" name="titulo">Titulo de la canción
-        <input type="radio" name="nombreAlbum">Nombre del álbum
-        <input type="radio" name="ambosCampos">Ambos campos<br>
+        <input type="radio" name="tipoBusqueda" value="titulo">Titulo de la canción
+        <input type="radio" name="tipoBusqueda" value="nombreAlbum">Nombre del álbum
+        <input type="radio" name="tipoBusqueda" value="ambosCampos">Ambos campos<br>
         <label for="genero">Genero músical: </label>
-        <select>
+        <select name="genero" id="genero">
             <option value="pop">Pop</option>
             <option value="rock">Rock</option>
             <option value="blues">Blues</option>
@@ -23,6 +23,5 @@
         </select><br>
         <input type="submit" value="Buscar">
     </form>
-
 </body>
 </html>
