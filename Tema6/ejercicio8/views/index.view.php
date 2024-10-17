@@ -36,8 +36,6 @@
     echo'<h1>Agenda Clonada</h1>';
     echo $cloneAgenda->__toString();
 
-
-
     ?>
 </body>
 </html>
