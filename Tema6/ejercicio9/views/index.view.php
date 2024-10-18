@@ -8,16 +8,22 @@
 <body>
     <h1>Lista de contactos</h1>
     <ul>
-        <?php if (isset($agenda) && !empty($agenda->getAgenda())): ?>
-            <?php foreach($agenda->getAgenda() as $contacto): ?>
-                <li>
-                    <?php echo $contacto->getNombre(); ?>
-                    <a href="vercontacto.view.php?id=<?php echo $contacto->getId(); ?>">Ver contacto</a>
-                </li>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <li>Error: La agenda no está disponible.</li>
-        <?php endif; ?>
+        <?php
+       if (isset($agenda)) {
+        foreach($agenda->getAgenda() as $contacto): ?>
+            <li>
+                <p>ID: <?php echo $contacto->getId(); ?></p>
+                <p>Nombre: <?php echo $contacto->getNombre(); ?></p>
+                <p>Teléfono: <?php echo $contacto->getTelefono(); ?></p>
+                <p>Fecha de alta: <?php echo $contacto->getFechaAlta()->format('Y-m-d'); ?></p>
+                <p>Foto: <img src="<?php echo $contacto->getFoto(); ?>" alt="Foto de <?php echo $contacto->getNombre(); ?>"></p>
+                <a href="vercontacto.view.php?id=<?php echo $contacto->getId(); ?>">Ver contacto</a>
+            </li>
+        <?php endforeach;
+    } else {
+        echo '<li>Error: La agenda no está disponible.</li>';
+    }
+    ?>
     </ul>
 </body>
 </html>
